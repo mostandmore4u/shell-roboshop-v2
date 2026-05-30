@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /.common.sh
+source ./common.sh
 check_root
 
 cp rabbitmq.repo /etc/yum.repos.d/rabbitmq.repo
