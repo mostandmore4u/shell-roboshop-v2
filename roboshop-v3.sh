@@ -31,7 +31,8 @@ if [ "$1" == "all" ]; then
     if [ "$ACTION" == "create" ]; then
         INSTANCES="$ALL_INSTANCES"
     else 
-        INSTANCES=$(echo "$ALL_INSTANCES" | tr ' ' '\n' ' ')
+        INSTANCES=$(echo "$ALL_INSTANCES" | tr ' ' '\n' | tac | tr '\n' ' ')
+        #INSTANCES=$(echo "$ALL_INSTANCES" | tr ' ' '\n' ' ') this is old one we used in v2
     fi
 else
     INSTANCES="$@"
